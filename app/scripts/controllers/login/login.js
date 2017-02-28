@@ -13,10 +13,19 @@ app.controller('loginCtrl', function($scope, $stateParams, userAccountService, $
   $scope.submit=function(user)
   {
     userAccountService.isExistUser(user).then(function(resp){
-    	if(resp){
-    		$state.go('userlist');
+      if(resp){
+        if(user.role=="admin") {
+       
+        $state.go('adminlist')
+       }
+
+      else {
+       
+         $state.go('userlist')
+       }
     	}
-     })
-   }
+     
+   })
+  }
 
  });

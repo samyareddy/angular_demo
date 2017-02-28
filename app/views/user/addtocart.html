@@ -1,0 +1,37 @@
+<h3>Add To Cart!</h3>
+  <nav class="navbar navbar-default row">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          </ul></br>
+<div>
+ <form name="coForm">
+  <label>Item : </br></label>
+   <input type="text" id= "itemName" name= "itemName" ng-model="user.itemName"></br>
+    </br>
+<label>Image : </br></label>
+  <input type="image" id="image" name="image" ng-model="user.image"></br>
+    </br>
+<label>Price : </br></label>
+  <input id= "price" name= "price" ng-model="user.price"></br>
+    </br>
+<label>Quantity : </br></label>
+  <input type="number" id= "quantity" name= "quantity" ng-model="user.quantity"></br>
+    </br>
+<label>Total : </br></label>
+  <input id= "total" name= "total" ng-model="user.total"></br>
+    </br>
+<button ng-click="createorder(user)">Create</button>
+  <button type="reset" ng-click="resetcoForm()">Reset</button>
+    </form>
+      </div>
+        </div>
+          </div>
+            </nav>
+<nav class="navbar navbar-default column">
+  <div class="container-fluid">
+    <a ng-click="userorders()">Orders</a>
+      <a ng-click="userlogout()">Logout</a>
+        </br>
+          </div>
+            </nav>

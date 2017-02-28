@@ -23,13 +23,13 @@ var omsDemoApp = angular.module('omsDemoApp', ['ui.router',
  {
   $urlRouterProvider.otherwise("/login")
   $stateProvider
-  .state("login", { 
+.state("login", { 
     url : "/login", 
     templateUrl : "views/login/login.html",
     controller : "loginCtrl",
  })
 
-  .state("register",{
+.state("register",{
   url : "/register",
   templateUrl : "views/login/register.html",
   controller : "registerCtrl",
@@ -54,16 +54,17 @@ var omsDemoApp = angular.module('omsDemoApp', ['ui.router',
   controller : "userlistCtrl",
  })
 
-.state("userorder",{
-  url : "/userorder",
-  templateUrl : "views/user/userorder.html",
-  controller : "userorderCtrl",
+.state("userorders",{
+  url : "/userorders",
+  templateUrl : "views/user/userorders.html",
+  controller : "userordersCtrl",
  })
 
-.state("usercreateorder",{
-  url : "/usercreateorder",
-  templateUrl : "views/user/usercreateorder.html",
-  controller : "usercreateorderCtrl"
+.state("addtocart",{
+  url : "/addtocart",
+  templateUrl : "views/user/addtocart.html",
+  controller : "addtocartCtrl"
  })
+
 
 }]);

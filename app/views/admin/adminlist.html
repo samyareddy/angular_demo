@@ -1,12 +1,42 @@
-<html>
-<body>
-  <header>
-    <h2>Welcome Admin!</h2>
-     </header>
-
-<aside>
-    <a ng-click="logout()">Logout</a>
-    </aside>
-    <html>
-
- <a ng-click="createitem()">Create Item</a>
+<h3>Create Items!</h3>
+  <nav class="navbar navbar-default row">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          </ul></br>
+<div>
+<form name="ciForm">
+<label>Item Name :</br></label>
+  <input type="text" id= "itemName" name= "itemName" ng-model="admin.itemName"></br>
+    </br>
+<label>Item No :</br></label>
+  <input type="number" id= "number" name= "number" ng-model="admin.number"></br>
+    </br>
+<label>Image : </br></label>
+  <input type="image" id="image" name="image" ng-model="admin.image"></br>
+    </br>
+<label>Price :</br></label>
+  <input type="number" id= "price" name= "price" ng-model="admin.price"></br>
+    </br>
+<label>Quantity :</br></label>
+  <input type="number" id= "quantity" name= "quantity" ng-model="admin.quantity"></br>
+    </br>
+<label>Category :</br></label>
+<select id = "category" ng-model = "admin.category">
+<option value = "c1">C1</option>
+<option value = "c2">C2</option>
+<option value = "c3">C3</option>
+<option value = "c4">C4</option>
+</select><br/>
+<button ng-click="createitem(admin)">Create</button>
+<button type="reset" ng-click="resetciForm()">Reset</button>
+  </form>
+    </div>
+      </div>
+        </nav>
+<nav class="navbar navbar-default column">
+  <div class="container-fluid">
+    <a ng-click="adminlogout()">Logout</a>
+      </br>
+       </div>
+         </nav>        

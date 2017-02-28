@@ -1,39 +1,47 @@
-<html>
-<body>
-  <header>
-    <h2>Welcome User!</h2>
-     </header>
-
-<aside>
-    <a ng-click="Orders()">Order</a>  
-    <a ng-click="createorders()">Create-Order</a>
-    <a ng-click="logout()">Logout</a>  
-    </aside>
-
-<a ng-click="category()">Category</a>  
-<a ng-click="items()">Items</a>  
+<h3>Welcome User!</h3>
+  <table class="user">
+    <nav class="navbar navbar-default column left">
+      <div class="container-fluid">
+        <a ng-click="userlogout()">Logout</a>
+          </br>
+            </div>
+              </nav>
+                </table>
+<nav class="navbar navbar-default column">
+  <div class="container-fluid">
+    <a ng-click="userorders()">Orders</a>
+      </br>
+        </div>
+          </nav>
+<nav class="navbar navbar-default column left">
+  <div class="container-fluid">
+    <a ng-click="usercreateorder()()">Create-Order</a>
+      </br>
+        </div>
+          </nav>             
+              
+<nav class="navbar navbar-default column">
+ <div class="container-fluid">
+  <a ng-click="category()">Category</a></br>
+<label><input value="c1" type="checkbox" name="category" ng-model= "user.category"/><a ng-click="c1()">  C1</a></label></br>
+<label><input value="c2" type="checkbox" name="category" ng-model= "user.category"/><a ng-click="c2()">  C2</a></label></br>
+<label><input value="c3" type="checkbox" name="category" ng-model= "user.category"/><a ng-click="c3()">  C3</a></label></br>
+<label><input value="c4" type="checkbox" name="category" ng-model= "user.category"/><a ng-click="c4()">  C4</a></label></br>
+ <a ng-click="addtocart()">Add To Cart</a>
+   </div>
+     </nav>
+              
+<table border="2">
+  <nav class="navbar navbar-default column">
+   <div class="container-fluid">
+     <a ng-click="items()">Items</a>  
+        <th>Name</th> 
+          <th>Image</th>
+            <th>Price</th> 
+              <th>Address</th>
+                </br>
+                  </div>
+                   </nav>
+                     </table>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
