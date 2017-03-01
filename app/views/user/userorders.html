@@ -1,29 +1,42 @@
-<h1>User Orders!</h1>
-  <nav class="navbar navbar-default column left">
-    <div class="container-fluid">
-      <a ng-click="userlogout()">Logout</a>
-        </br>
-          </div>
-            </nav>
-<nav class="navbar navbar-default column left">
-  <div class="container-fluid">
-    <a ng-click="usercreateorder()">Create-Order</a>
-      </br>
-        </div>
-          </nav>     
-<nav class="navbar navbar-default column left">
- <div class="container-fluid">
-  <table border="2">
-   <div>Orders!</div>
-    <th>Order ID</th> 
-     <th>Date</th>
-      <th>Item</th>
-        <th>Price</th> 
-          <th>Address</th>
-           </br>
-            </div>
-              </nav>
-               </table>
-               
 
-                          
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+
+<center>
+<body><table width="50%" border="0">
+<tr>
+<td colspan="1" bgcolor="#aaa">
+<div style="float:left">OMS</br></div>
+<div style="float:right"><a ng-click="userlogout()">Logout</a></div>
+</td>
+</tr>
+
+<tr valign="top">
+<td bgcolor="#b5dcb3" width="100" height="300">
+<center>OrderList!</center>
+<center>
+<table width="600" border="1">
+ <tr>
+   <th>Order-ID</th>
+   <th>Date</th>
+   <th>Item</th>
+   <th>Price</th>
+   <th>Address</th>
+   </tr>
+   </table>
+    </center>
+</td>
+</tr>
+  
+<tr>
+<td colspan="1" bgcolor="#aaa" height="50">
+<a ng-click="usercreateorder()">Create-Order</a>
+</td>
+</tr>
+</table>
+</body>
+</center>
+</html>

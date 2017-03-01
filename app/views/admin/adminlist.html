@@ -1,9 +1,24 @@
-<h3>Create Items!</h3>
-  <nav class="navbar navbar-default row">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <ul class="nav navbar-nav">
-          </ul></br>
+<!DOCTYPE html>
+<html>
+<head>
+<h1><center>Order Management System</center>
+</h1>
+</head>
+<body>
+<center>
+<table width="70%" border="0" height="500">
+<tr>
+<td colspan="2" bgcolor="#aaa" height="100">
+<div style="float:left">Name</br></div>
+<div style="float:right"><a ng-click="adminlogout()">Logout</a></div>
+</td>
+</tr>
+
+<tr valign="top">
+<td bgcolor="#b5dcb3" width="100" height="500">
+<center>Create-Items!</center>
+<center>
+<tr>
 <div>
 <form name="ciForm">
 <label>Item Name :</br></label>
@@ -23,20 +38,21 @@
     </br>
 <label>Category :</br></label>
 <select id = "category" ng-model = "admin.category">
-<option value = "c1">C1</option>
-<option value = "c2">C2</option>
-<option value = "c3">C3</option>
-<option value = "c4">C4</option>
+<option value = "books">Books</option>
+<option value = "furniture">Furniture</option>
+<option value = "grocery">Grocery</option>
+<option value = "clothing">Clothing</option>
 </select><br/>
+
 <button ng-click="createitem(admin)">Create</button>
 <button type="reset" ng-click="resetciForm()">Reset</button>
-  </form>
-    </div>
-      </div>
-        </nav>
-<nav class="navbar navbar-default column">
-  <div class="container-fluid">
-    <a ng-click="adminlogout()">Logout</a>
-      </br>
-       </div>
-         </nav>        
+</form>
+</div>
+</tr>
+</center>
+</td>
+</tr>
+      
+
+   
+      
