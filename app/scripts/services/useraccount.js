@@ -41,6 +41,22 @@
     return deferred.promise;
       }
          
+
+      factory.getCurrentUserInfo = function(user){
+        var deferred = $q.defer();
+        var userinfo =  JSON.parse(localStorage.getItem('userinfo'));  
+
+
+        var userDetails;
+        for (var i=0; i< userinfo.length; i++){
+         userDetails = userinfo[i];   
+           if ((user.userName == userDetails.userName) && (user.password == userDetails.password)){
+              break;
+            }
+        }
+        deferred.resolve(userDetails);
+        return deferred.promise;
+      }
     return factory;
      
      });

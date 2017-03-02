@@ -1,5 +1,8 @@
 var app = angular.module('omsDemoApp');
-app.controller('userlistCtrl', function($scope, $stateParams, $state) {
+app.controller('userlistCtrl', function($scope, $stateParams, ItemService, $state) {
+
+ $scope.itemList = ItemService.itemDetails();
+
 
  $scope.userorders= function(){
   	
@@ -10,7 +13,9 @@ $scope.usercreateorder= function(){
   	$state.go('addtocart');
   }
   
- $scope.addtocart= function(){
+
+
+ $scope.addtocart= function(item){
   	
   $state.go('addtocart');
   }
@@ -18,5 +23,6 @@ $scope.userlogout= function(){
   	
   $state.go('login');
 }
+
 
   });

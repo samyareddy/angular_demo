@@ -22,12 +22,19 @@
  <tr>
    <th>Order-ID</th>
    <th>Date</th>
-   <th>Item</th>
+   <th>Item Name</th>
    <th>Price</th>
    <th>Address</th>
    </tr>
-   </table>
-    </center>
+<tr ng-repeat = "item in category.items">  
+       <td>{{item.order_id}}</td>
+       <td>{{item.date}}</td>
+       <td>{{item.itemName}}</td>
+        <td>{{item.price}}</td>
+         <td>{{item.address}}</td>
+</tr>
+</table>
+</center>
 </td>
 </tr>
   

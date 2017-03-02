@@ -14,7 +14,8 @@ app.controller('loginCtrl', function($scope, $stateParams, userAccountService, $
   {
     userAccountService.isExistUser(user).then(function(resp){
       if(resp){
-        if(user.role=="admin") {
+        userAccountService.getCurrentUserInfo(user).then(function(currentUser){
+          if(currentUser.role=="admin") {
        
         $state.go('adminlist')
        }
@@ -23,6 +24,8 @@ app.controller('loginCtrl', function($scope, $stateParams, userAccountService, $
        
          $state.go('userlist')
        }
+        })
+        
     	}
      
    })

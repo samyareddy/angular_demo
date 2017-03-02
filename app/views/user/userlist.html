@@ -1,42 +1,63 @@
 <!DOCTYPE html>
-<html>
-<head>
-<h1><center>Order Management System</center>
-</h1>
-</head>
+ <html>
+   <head>
+    <h1><center>Order Management System</center>
+     </h1>
+      </head>
 <body>
-<center>
-<table width="70%" border="0" height="500">
-<tr>
-<td colspan="2" bgcolor="#aaa" height="100">
-<div style="float:left">Name</br></div>
-<div style="float:right"><a ng-click="userlogout()">Logout</a></div>
+ <center>
+  <table width="70%" border="0" height="600">
+   <tr>
+    <td colspan="2" bgcolor="#aaa" height="50">
+ 
+<div style="float:left"><div style="padding: 10px 50px 30px 50px">Name :</br></div></div>
 
-</td>
-</tr>
+<div style="float:right"><div style="padding: 10px 50px 0px 0px"><button><a ng-click="userlogout()">Logout</a></button></div></div>
+       </td>
+        </tr>
 <tr valign="top">
-<td bgcolor="#b5dcb3" width="12%"></br>
-<label><input type="checkbox" name="category1" ng-model="user.category1"/><a    ng-click="books()">        Books</a></label></br></br>
-<label><input type="checkbox" name="category2" ng-model="user.category2"/><a  ng-click="furniture()">       Furniture</a></label></br> </br>
-<label><input type="checkbox" name="category3" ng-model="user.category3"/><a ng-click="grocery()">        Grocery</a></label></br></br>
-<label><input type="checkbox" name="category4" ng-model="user.category4"/><a ng-click="clothing()"         >Clothing</a></label></br>
+<td bgcolor="#b5dcb3" width="16%">
+<center>Categories!</center></br>
+<div style="padding: 0px 0px 0px 40px">
+<label><input type="checkbox" id="books" name="books" ng-model="user.books"/><a ng-click="books()">Books</a>
+</label></br></br>
+<label><input type="checkbox" id="furniture" name="furniture" ng-model="user.furniture"/><a  ng-click="furniture()">Furniture</a></label></br> </br>
+<label><input type="checkbox" id="grocery" name="grocery" ng-model="user.grocery"/><a ng-click="grocery()">Grocery</a></label></br></br>
+<label><input type="checkbox" id="clothing" name="clothing" ng-model="user.clothing"/><a ng-click="clothing()">Clothing</a></label></br>
+ </td></div>
 
-  </td>
-<td bgcolor="#eee" width="100" height="200">
+<td bgcolor="#eee" width="0" height="200"><center><div>Items!</div></center>
+<div style="padding: 30px 0px 0px 20px"><center><table width="900" border="1">
+   
+     <tr>
+        <th>Item Name</th>
+        <th>Item No</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Action</th>
+        </tr>
+  <tr ng-repeat = "item in itemList">  
+       <td>{{item.itemName}}</td>
+      <td><center>{{item.itemNumber}}</center></td>
+       <td>{{item.image}}</td>
+        <td><center>{{item.price}}</center></td>
+      <td>  <center><button><a ng-click="addtocart(item)">Add-To-Cart</a></button> <center></td>
+</tr>
+</table><center>
+</td>
 
-  </td>
-   </tr>
+</tr>
   
 <tr>
 <td colspan="2" bgcolor="#aaa" height="50">
- <a ng-click="userorders()">Orders</a>
-  <div style="float:right"><a ng-click="usercreateorder()">Create-Order</a>
-</td>
- </tr>
-  </table>
+<div style="float:left"><div style="padding: 10px 50px 30px 50px"><button><a ng-click="userorders()">Orders</a></button> </div></div>
+  <div style="padding: 10px 50px 30px 50px"><button><a ng-click="usercreateorder()">Create-Order</a></button></div>
+      </td>
+     </tr>
+    </table>
   </center>
-   </body>
-    </html>
+ </body>
+</html>
 
 
 

@@ -1,37 +1,50 @@
-<h3>Add To Cart!</h3>
-  <nav class="navbar navbar-default row">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <ul class="nav navbar-nav">
-          </ul></br>
-<div>
- <form name="coForm">
-  <label>Item : </br></label>
-   <input type="text" id= "itemName" name= "itemName" ng-model="user.itemName"></br>
+<!DOCTYPE html>
+ <html>
+  <head>
+   <h1><center>Add To Cart!</center></h1>
+    </head>
+<body>
+ <center>
+  <table width="70%" border="0" height="400">
+   <tr>
+    <td colspan="1" bgcolor="#aaa" height="100">
+     <div style="float:left"><a ng-click="userorders()">Orders</a></br></div>
+      <div style="float:right"><a ng-click="userlogout()">Logout</a></div>
+       </td>
+        </tr>
+<tr valign="top">
+ <td bgcolor="#b5dcb3" width="100" height="300"></br>
+  <div>
+   <center>Create-Order!</center>
+    <center>
+     <table width="600" border="1">
+      <tr>
+        <th>Item Name</th>
+        <th>Item No</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        </tr>
+        <tr ng-repeat = "item in category.items">  
+        <td>{{item.itemname}}</td>
+        <td>{{item.itemno}}</td>
+        <td>{{item.image}}</td>
+        <td>{{item.price}}</td>
+        <td><input type="number" id="quantity" name="quantity" ng-model="item.quantity"></td>
+        </tr>
+
+        </table>
+      </center>
+    </div>
+  </td>
+</tr>
+<tr>
+
+  <td colspan="1" bgcolor="#aaa" height="100">
+   <div style="float:left">Address</br></div>
+     <div style="float:right"><button ng-click="usercreate(item)">Create</button></div>
     </br>
-<label>Image : </br></label>
-  <input type="image" id="image" name="image" ng-model="user.image"></br>
-    </br>
-<label>Price : </br></label>
-  <input id= "price" name= "price" ng-model="user.price"></br>
-    </br>
-<label>Quantity : </br></label>
-  <input type="number" id= "quantity" name= "quantity" ng-model="user.quantity"></br>
-    </br>
-<label>Total : </br></label>
-  <input id= "total" name= "total" ng-model="user.total"></br>
-    </br>
-<button ng-click="createorder(user)">Create</button>
-  <button type="reset" ng-click="resetcoForm()">Reset</button>
-    </form>
-      </div>
-        </div>
-          </div>
-            </nav>
-<nav class="navbar navbar-default column">
-  <div class="container-fluid">
-    <a ng-click="userorders()">Orders</a>
-      <a ng-click="userlogout()">Logout</a>
-        </br>
-          </div>
-            </nav>
+  </td>
+</tr>
+          

@@ -14,7 +14,9 @@ $scope.createorder= function(user){
   	$state.go('userorders');
   }
 
-
+$scope.usercreate= function(item){
+  	$state.go('userorders');
+  }
 
 
   });
