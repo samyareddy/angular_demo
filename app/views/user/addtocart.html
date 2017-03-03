@@ -8,8 +8,8 @@
   <table width="70%" border="0" height="400">
    <tr>
     <td colspan="1" bgcolor="#aaa" height="100">
-     <div style="float:left"><a ng-click="userorders()">Orders</a></br></div>
-      <div style="float:right"><a ng-click="userlogout()">Logout</a></div>
+     <div style="float:left"><button ng-click="userorders()">Orders</button></br></div>
+      <div style="float:right"><button ng-click="userlogout()">Logout</button></div>
        </td>
         </tr>
 <tr valign="top">
@@ -20,18 +20,21 @@
      <table width="600" border="1">
       <tr>
         <th>Item Name</th>
-        <th>Item No</th>
         <th>Image</th>
         <th>Price</th>
         <th>Quantity</th>
         <th>Total</th>
+        <th>Action</th>
+        
         </tr>
-        <tr ng-repeat = "item in category.items">  
-        <td>{{item.itemname}}</td>
-        <td>{{item.itemno}}</td>
+        <tr ng-repeat = "item in cartList">  
+        <td><center>{{item.itemName}}</center></td>
         <td>{{item.image}}</td>
         <td>{{item.price}}</td>
-        <td><input type="number" id="quantity" name="quantity" ng-model="item.quantity"></td>
+        <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
+        </center></td>
+        <td><center>{{item.total = item.price * item.quantity}}</center></td>
+        <td><center><button ng-click="deleteItem($index)">Delete</button></center>
         </tr>
 
         </table>
@@ -42,8 +45,9 @@
 <tr>
 
   <td colspan="1" bgcolor="#aaa" height="100">
-   <div style="float:left">Address</br></div>
-     <div style="float:right"><button ng-click="usercreate(item)">Create</button></div>
+   <div style="float:left">Address :</br></div></br>
+   <button ng-click="itemList()">Item-List</button>
+      <div style="float:right"><button ng-click="createOrder(item)">Create-Order</button>
     </br>
   </td>
 </tr>

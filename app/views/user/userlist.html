@@ -31,17 +31,15 @@
    
      <tr>
         <th>Item Name</th>
-        <th>Item No</th>
         <th>Image</th>
         <th>Price</th>
         <th>Action</th>
         </tr>
   <tr ng-repeat = "item in itemList">  
-       <td>{{item.itemName}}</td>
-      <td><center>{{item.itemNumber}}</center></td>
+       <td><center>{{item.itemName}}</center></td>
        <td>{{item.image}}</td>
         <td><center>{{item.price}}</center></td>
-      <td>  <center><button><a ng-click="addtocart(item)">Add-To-Cart</a></button> <center></td>
+      <td><center><button><a ng-click="addtocart(item)">Add-To-Cart</a></button> <center></td>
 </tr>
 </table><center>
 </td>
@@ -51,7 +49,8 @@
 <tr>
 <td colspan="2" bgcolor="#aaa" height="50">
 <div style="float:left"><div style="padding: 10px 50px 30px 50px"><button><a ng-click="userorders()">Orders</a></button> </div></div>
-  <div style="padding: 10px 50px 30px 50px"><button><a ng-click="usercreateorder()">Create-Order</a></button></div>
+  <div style="padding: 10px 50px 30px 50px"><button><a ng-click="usercreateorder()">Create-Order</a>
+  </button></div>
       </td>
      </tr>
     </table>

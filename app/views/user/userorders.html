@@ -10,7 +10,7 @@
 <tr>
 <td colspan="1" bgcolor="#aaa">
 <div style="float:left">OMS</br></div>
-<div style="float:right"><a ng-click="userlogout()">Logout</a></div>
+<div style="float:right"><button ng-click="userlogout()">Logout</button></div>
 </td>
 </tr>
 
@@ -26,7 +26,7 @@
    <th>Price</th>
    <th>Address</th>
    </tr>
-<tr ng-repeat = "item in category.items">  
+<tr ng-repeat = "item in cartList">  
        <td>{{item.order_id}}</td>
        <td>{{item.date}}</td>
        <td>{{item.itemName}}</td>
@@ -40,7 +40,9 @@
   
 <tr>
 <td colspan="1" bgcolor="#aaa" height="50">
-<a ng-click="usercreateorder()">Create-Order</a>
+<div style="float:left"><div style="padding: 0px 0px 0px 30px"><button ng-click="usercreateorder()">Create-Order</button></div></div>
+
+<div style="padding: 0px 20px 0px 50px"><button ng-click="itemList()">Item-List</button></div>
 </td>
 </tr>
 </table>

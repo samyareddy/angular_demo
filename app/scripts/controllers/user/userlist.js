@@ -15,10 +15,17 @@ $scope.usercreateorder= function(){
   
 
 
+
+
  $scope.addtocart= function(item){
   	
+ $scope.cartList = ItemService.addtocart(item);
+
   $state.go('addtocart');
   }
+
+
+
 $scope.userlogout= function(){
   	
   $state.go('login');
@@ -26,3 +33,13 @@ $scope.userlogout= function(){
 
 
   });
+
+
+
+
+
+
+
+
+ 
+    

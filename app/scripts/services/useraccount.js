@@ -8,9 +8,9 @@
 
     var userinfo =  JSON.parse(localStorage.getItem('userinfo'));
     console.log(angular.copy(user));
-    if(userinfo == null){
-         userinfo = [];
-        }
+    if(userinfo== null){
+        userinfo = [];
+      }
 
     userinfo.push(user);
     console.log(angular.copy(userinfo));
