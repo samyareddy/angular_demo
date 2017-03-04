@@ -1,51 +1,47 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title></title>
-</head>
-
-<center>
-<body><table width="50%" border="0">
-<tr>
-<td colspan="1" bgcolor="#aaa">
-<div style="float:left">OMS</br></div>
-<div style="float:right"><button ng-click="userlogout()">Logout</button></div>
-</td>
+<center><h1>Order Management Sysytem</h1></center>
+ <center>
+  <table width="50%" border="0">
+   <tr>
+    <td colspan="1" bgcolor="#aaa">
+     <div style="padding: 10px 50px 40px 40px">
+      <div style="float:right">
+       <button ng-click="userLogout()">Logout</button>
+     </div>
+    </div>
+  </td>
 </tr>
-
 <tr valign="top">
-<td bgcolor="#b5dcb3" width="100" height="300">
-<center>OrderList!</center>
-<center>
-<table width="600" border="1">
- <tr>
-   <th>Order-ID</th>
-   <th>Date</th>
-   <th>Item Name</th>
-   <th>Price</th>
-   <th>Address</th>
-   </tr>
-<tr ng-repeat = "item in cartList">  
-       <td>{{item.order_id}}</td>
-       <td>{{item.date}}</td>
-       <td>{{item.itemName}}</td>
-        <td>{{item.price}}</td>
-         <td>{{item.address}}</td>
-</tr>
-</table>
-</center>
-</td>
-</tr>
-  
+ <td bgcolor="#b5dcb3" width="100" height="300">
+  <div style="padding: 30px 0px 0px 20px">
+   <center>OrderList!</center>
+    <div style="padding: 10px 0px 0px 10px">
+     <center>
+      <table width="600" border="1">
+       <tr>
+        <th>Order-ID</th>
+         <th>Order Date</th>
+          <th>Item Count</th>
+           <th>Total</th>
+            <th>Address</th>
+             </tr>
+<tr ng-repeat = "order in OrderList">  
+ <td><center>{{order.orderid}}</center></td>
+  <td><center>{{order.orderdate | date : "dd.MM.y"}}</center></td>
+   <td><center>{{order.itemcount}}</center></td>
+     <td><center>{{order.total}}</center></td>
+      <td><center>{{user.address}}</center></td>
+     </tr>
+    </table>
+   </center>
+  </td>
+ </tr>
 <tr>
-<td colspan="1" bgcolor="#aaa" height="50">
-<div style="float:left"><div style="padding: 0px 0px 0px 30px"><button ng-click="usercreateorder()">Create-Order</button></div></div>
-
-<div style="padding: 0px 20px 0px 50px"><button ng-click="itemList()">Item-List</button></div>
-</td>
-</tr>
-</table>
-</body>
+  <td colspan="1" bgcolor="#aaa" height="50">
+    <div style="padding: 0px 20px 0px 50px">
+     <button ng-click="itemList()">Items-List</button>
+    </div>
+   </td>
+  </tr>
+ </table>
 </center>
-</html>
+

@@ -1,54 +1,56 @@
-<!DOCTYPE html>
- <html>
-  <head>
-   <h1><center>Add To Cart!</center></h1>
-    </head>
-<body>
+<h1><center>Cart List!</center></h1>
  <center>
   <table width="70%" border="0" height="400">
    <tr>
     <td colspan="1" bgcolor="#aaa" height="100">
-     <div style="float:left"><button ng-click="userorders()">Orders</button></br></div>
-      <div style="float:right"><button ng-click="userlogout()">Logout</button></div>
+     <div style="float:left">
+      <div style="padding: 10px 50px 30px 50px">
+       <button ng-click="userOrders()">Orders</button></div></div>
+        <div style="float:right">
+         <div style="padding: 10px 50px 0px 0px">
+          <button ng-click="userLogout()">Logout</button>
+         </div>
        </td>
-        </tr>
+     </tr>
 <tr valign="top">
  <td bgcolor="#b5dcb3" width="100" height="300"></br>
   <div>
    <center>Create-Order!</center>
-    <center>
-     <table width="600" border="1">
-      <tr>
+    <div style="padding: 30px 0px 0px 20px">
+     <center>
+      <table width="600" border="1">
+       <tr>
         <th>Item Name</th>
-        <th>Image</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-        <th>Action</th>
-        
+         <th>Image</th>
+          <th>Price</th>
+           <th>Quantity</th>
+            <th>Total</th>
+             <th>Action</th>
+           </tr>
+<tr ng-repeat = "item in cartList">  
+ <td><center>{{item.itemName}}</center></td>
+  <td><center>{{item.image}}</center></td>
+   <td><center>{{item.price}}</center></td>
+    <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
+     </center></td>
+      <td><center>{{item.total = item.price * item.quantity}}</center></td>
+       <td><center><button ng-click="deleteItem($index)">Delete</button></center>
         </tr>
-        <tr ng-repeat = "item in cartList">  
-        <td><center>{{item.itemName}}</center></td>
-        <td>{{item.image}}</td>
-        <td>{{item.price}}</td>
-        <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
-        </center></td>
-        <td><center>{{item.total = item.price * item.quantity}}</center></td>
-        <td><center><button ng-click="deleteItem($index)">Delete</button></center>
-        </tr>
-
-        </table>
+       </table>
       </center>
-    </div>
-  </td>
-</tr>
+     </div>
+    </td>
+  </tr>
 <tr>
-
-  <td colspan="1" bgcolor="#aaa" height="100">
-   <div style="float:left">Address :</br></div></br>
-   <button ng-click="itemList()">Item-List</button>
-      <div style="float:right"><button ng-click="createOrder(item)">Create-Order</button>
-    </br>
-  </td>
-</tr>
+ <td colspan="1" bgcolor="#aaa" height="100">
+  <div style="float:left">
+   <div style="padding: 10px 50px 30px 50px">Address : </br>{{user.address}}</div></div>
+    <div style="padding: 10px 50px 30px 90px">
+     <button ng-click="itemList()">Items-List</button>
+      <div style="float:right">
+       <button ng-click="createOrder()">Create-Order</button>
+      </div>
+     </div>
+    </td>
+  </tr>
           

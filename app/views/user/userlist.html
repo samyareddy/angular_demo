@@ -1,62 +1,65 @@
-<!DOCTYPE html>
- <html>
-   <head>
-    <h1><center>Order Management System</center>
-     </h1>
-      </head>
-<body>
+<h1><center>Order Management System</center></h1>
  <center>
   <table width="70%" border="0" height="600">
    <tr>
     <td colspan="2" bgcolor="#aaa" height="50">
- 
-<div style="float:left"><div style="padding: 10px 50px 30px 50px">Name :</br></div></div>
-
-<div style="float:right"><div style="padding: 10px 50px 0px 0px"><button><a ng-click="userlogout()">Logout</a></button></div></div>
-       </td>
-        </tr>
+     <div style="float:left">
+      <div style="padding: 10px 50px 30px 50px">Name : {{user.userName}}</div>
+       </div>
+        <div style="float:right">
+         <div style="padding: 10px 50px 0px 0px">
+          <button ng-click="userLogout()">Logout</button></div></div>
+         </td>
+       </tr>
 <tr valign="top">
-<td bgcolor="#b5dcb3" width="16%">
-<center>Categories!</center></br>
-<div style="padding: 0px 0px 0px 40px">
-<label><input type="checkbox" id="books" name="books" ng-model="user.books"/><a ng-click="books()">Books</a>
-</label></br></br>
-<label><input type="checkbox" id="furniture" name="furniture" ng-model="user.furniture"/><a  ng-click="furniture()">Furniture</a></label></br> </br>
-<label><input type="checkbox" id="grocery" name="grocery" ng-model="user.grocery"/><a ng-click="grocery()">Grocery</a></label></br></br>
-<label><input type="checkbox" id="clothing" name="clothing" ng-model="user.clothing"/><a ng-click="clothing()">Clothing</a></label></br>
- </td></div>
-
-<td bgcolor="#eee" width="0" height="200"><center><div>Items!</div></center>
-<div style="padding: 30px 0px 0px 20px"><center><table width="900" border="1">
-   
+ <td bgcolor="#b5dcb3" width="16%">
+  <center>Categories!</center></br>
+   <div style="padding: 10px 50px 30px 50px">
+    <label><input type="checkbox" id="books" name="books" ng-model="user.books"/>
+     <a ng-click="books()">Books</a></label></br></br>
+      <label><input type="checkbox" id="furniture" name="furniture" ng-model="user.furniture"/>
+       <a ng-click="furniture()">Furniture</a></label></br></br>
+        <label><input type="checkbox" id="grocery" name="grocery" ng-model="user.grocery"/>
+         <a ng-click="grocery()">Grocery</a></label></br></br>
+          <label><input type="checkbox" id="clothing" name="clothing" ng-model="user.clothing"/>
+           <a ng-click="clothing()">Clothing</a></label></br>
+          </td>
+        </div>
+<td bgcolor="#eee" width="0" height="200">
+ <center><div>Items!</div></center>
+  <div style="padding: 30px 0px 0px 20px">
+   <center>
+    <table width="900" border="1">
      <tr>
-        <th>Item Name</th>
-        <th>Image</th>
+      <th>Item Name</th>
+       <th>Image</th>
         <th>Price</th>
-        <th>Action</th>
+         <th>Action</th>
         </tr>
-  <tr ng-repeat = "item in itemList">  
-       <td><center>{{item.itemName}}</center></td>
-       <td>{{item.image}}</td>
-        <td><center>{{item.price}}</center></td>
-      <td><center><button><a ng-click="addtocart(item)">Add-To-Cart</a></button> <center></td>
-</tr>
-</table><center>
-</td>
-
-</tr>
-  
+<tr ng-repeat = "item in itemList">  
+  <td><center>{{item.itemName}}</center></td>
+    <td><center>{{item.image}}</center></td>
+      <td><center>{{item.price}}</center></td>
+        <td><center><button ng-click="addtocart(item)">Add-To-Cart</button></center></td>
+       </tr>
+      </table>
+     </center>
+    </div>
+   </td>
+  </tr>
 <tr>
-<td colspan="2" bgcolor="#aaa" height="50">
-<div style="float:left"><div style="padding: 10px 50px 30px 50px"><button><a ng-click="userorders()">Orders</a></button> </div></div>
-  <div style="padding: 10px 50px 30px 50px"><button><a ng-click="usercreateorder()">Create-Order</a>
-  </button></div>
-      </td>
-     </tr>
-    </table>
+ <td colspan="2" bgcolor="#aaa" height="50">
+   <div style="float:left">
+    <div style="padding: 10px 50px 30px 50px">
+     <button ng-click="userOrders()">Orders</button></div></div>
+      <div style="padding: 10px 50px 30px 50px">
+       <button ng-click="createOrder()">Create-Order</button>
+      </div>
+     </td>
+    </tr>
+   </table>
   </center>
- </body>
-</html>
+
 
 
 

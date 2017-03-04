@@ -1,36 +1,25 @@
 var app = angular.module('omsDemoApp');
 app.controller('userlistCtrl', function($scope, $stateParams, ItemService, $state) {
+  
+$scope.itemList = ItemService.itemDetails();
 
- $scope.itemList = ItemService.itemDetails();
 
-
- $scope.userorders= function(){
-  	
+ $scope.userOrders= function() {
   $state.go('userorders');
   }
 
-$scope.usercreateorder= function(){
-  	$state.go('addtocart');
-  }
-  
-
-
-
-
- $scope.addtocart= function(item){
-  	
- $scope.cartList = ItemService.addtocart(item);
-
+$scope.createOrder= function() {
   $state.go('addtocart');
   }
+  
+$scope.addtocart= function(item) {
+  $scope.cartList = ItemService.addtocart(item);
+  
+  }
 
-
-
-$scope.userlogout= function(){
-  	
+$scope.userLogout= function() {
   $state.go('login');
-}
-
+  }
 
   });
 

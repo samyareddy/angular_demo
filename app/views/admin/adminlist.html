@@ -1,46 +1,56 @@
-<!DOCTYPE html>
- <html>
-  <head>
-   <h1><center>Order Management System</center></h1>
-    </head>
-<body>
-<form name="ciForm">
- <center>
-  <table width="70%" border="0" height="500">
-   <tr>
-    <td colspan="1" bgcolor="#aaa" height="100">
-     <div style="float:left">Name</br></div>
-      <div style="float:right"><a ng-click="adminlogout()">Logout</a></div>
-       </td>
-        </tr>
+<h1><center>Order Management System</center></h1>
+ <form name="ciForm">
+  <center>
+   <table width="70%" border="0" height="500">
+    <tr>
+      <td colspan="1" bgcolor="#aaa" height="100">
+        <div style="float:left">
+          <div style="padding: 10px 50px 30px 50px">Name : {{user.userName}}</div>
+        </div>
+        <div style="float:right">
+         <div style="padding: 10px 50px 0px 0px">
+          <button ng-click="adminLogout()">Logout</button>
+         </div>
+        </div>
+      </td>
+    </tr>
 <tr valign="top">
  <td bgcolor="#b5dcb3" width="10%" height="200">
   <center>Create-Items!</center>
-   <div>
-    <label>Item Name :</label>
+   <div style="padding: 20px 20px 20px 20px">
+    <div>
+      <label>Item Name :</label>
       <input type="text" id="itemName" name="itemName" ng-model="item.itemName"></br></br>
-         <label>Image : </label>
-          <input type="image" id="image" name="image" ng-model="item.image"></br></br>
-           <label>Price :</label>
-            <input id="price" name="price" ng-model="item.price"></br></br>
-             <label>Quantity :</label>
-              <input type="number" id="quantity" name="quantity" ng-model="item.quantity"></br></br>
-               <label>Category :</label>
-                <select id = "category" name="category" ng-model="item.category">
-                 <option value = "books">Books</option>
-                  <option value = "furniture">Furniture</option>
-                   <option value = "grocery">Grocery</option>
-                    <option value = "clothing">Clothing</option>
-                     </select>
-                      </form></br>
+       <label>Image : </label>
+        <input type="image" id="image" name="image" ng-model="item.image"></br></br>
+         <label>Price :</label>
+          <input id="price" name="price" ng-model="item.price"></br></br>
+           <label>Quantity :</label>
+            <input type="number" id="quantity" name="quantity" ng-model="item.quantity"></br></br>
+             <label>Category :</label>
+              <select id = "category" name="category" ng-model="item.category">
+               <option value = "books">Books</option>
+                <option value = "furniture">Furniture</option>
+                 <option value = "grocery">Grocery</option>
+                  <option value = "clothing">Clothing</option>
+                 </select>
+                </div>
+               </div>
+              </td>
+             </tr>
+            </br>
 <tr>
  <td colspan="1" bgcolor="#aaa" height="50">
-  <div style="float:left"><button ng-click="adminCreate(item)">Create</button></div>
-   <button type="reset" ng-click="resetciForm()">Reset</button></br></div>
-   </form>
-  </div>
- </td>
-</tr>
+  <div style="float:left">
+   <div style="padding: 10px 50px 30px 100px">
+    <button ng-click="adminCreate(item)">Create-Item</button></div></div>
+    </td>
+   </tr>
+  </table>
+ </center>
+</form>
+
+
       
 
    
