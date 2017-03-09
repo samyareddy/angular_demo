@@ -16,8 +16,9 @@ var omsDemoApp = angular.module('omsDemoApp', ['ui.router',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ]);
+    'ngTouch',
+    'ui.bootstrap'
+   ]);
 
  omsDemoApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider)
  {

@@ -11,4 +11,4 @@ app.controller('userordersCtrl', function($scope, $stateParams, ItemService, $st
   	    $state.go('userlist');
     }
 
-    });
+});

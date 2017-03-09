@@ -9,7 +9,7 @@
         </div>
         <div style="float:right">
          <div style="padding: 10px 50px 0px 0px">
-          <button ng-click="adminLogout()">Logout</button>
+          <button type="button" class="btn" ng-click="adminLogout()">Logout</button>
          </div>
         </div>
       </td>
@@ -21,8 +21,16 @@
     <div>
       <label>Item Name :</label>
       <input type="text" id="itemName" name="itemName" ng-model="item.itemName"></br></br>
-       <label>Image : </label>
-        <input type="image" id="image" name="image" ng-model="item.image"></br></br>
+     <!--   <input type="file" ngf-select ng-model="item.image" name="file"    
+             accept="image/*" ngf-max-size="2MB" required
+             ngf-model-invalid="errorFile">
+      <i ng-show="myForm.file.$error.required">*required</i><br>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+    <br/> -->
+     <!--   <label>Image : </label>
+        <input type="image" id="image" name="image" ng-model="item.image"></br></br> -->
          <label>Price :</label>
           <input id="price" name="price" ng-model="item.price"></br></br>
            <label>Quantity :</label>
@@ -43,7 +51,7 @@
  <td colspan="1" bgcolor="#aaa" height="50">
   <div style="float:left">
    <div style="padding: 10px 50px 30px 100px">
-    <button ng-click="adminCreate(item)">Create-Item</button></div></div>
+    <button type="button" class="btn" ng-click="adminCreate(item)">Create-Item</button></div></div>
     </td>
    </tr>
   </table>

@@ -12,4 +12,4 @@ app.controller('adminlistCtrl', function($scope, $stateParams, ItemService, $sta
   	    $state.go('login');
     }
 
-    });
+});

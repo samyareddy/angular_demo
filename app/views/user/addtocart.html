@@ -5,36 +5,34 @@
     <td colspan="1" bgcolor="#aaa" height="100">
      <div style="float:left">
       <div style="padding: 10px 50px 30px 50px">
-       <button ng-click="userOrders()">Orders</button></div></div>
+       <button type="button" class="btn btn-primary btn-sm" ng-click="userOrders()">Orders</button></div></div>
         <div style="float:right">
          <div style="padding: 10px 50px 0px 0px">
-          <button ng-click="userLogout()">Logout</button>
+          <button type="button" class="btn btn-primary btn-sm" ng-click="userLogout()">Logout</button>
          </div>
        </td>
      </tr>
 <tr valign="top">
- <td bgcolor="#b5dcb3" width="100" height="300"></br>
+ <td bgcolor="#b5dcb3" width="100" height="400"></br>
   <div>
    <center>Create-Order!</center>
-    <div style="padding: 30px 0px 0px 20px">
+    <div style="padding: 30px 20px 20px 20px">
      <center>
       <table width="600" border="1">
        <tr>
-        <th>Item Name</th>
-         <th>Image</th>
-          <th>Price</th>
-           <th>Quantity</th>
-            <th>Total</th>
-             <th>Action</th>
+        <th><div style="padding: 10px 10px 10px 10px"><center>Item Name</center></th>
+          <th><div style="padding: 10px 10px 10px 10px"><center>Price</center></th>
+           <th><div style="padding: 10px 10px 10px 10px"><center>Quantity</center></th>
+            <th><div style="padding: 10px 10px 10px 10px"><center>Total</center></th>
+             <th><div style="padding: 10px 10px 10px 10px"><center>Action</center></th>
            </tr>
 <tr ng-repeat = "item in cartList">  
  <td><center>{{item.itemName}}</center></td>
-  <td><center>{{item.image}}</center></td>
    <td><center>{{item.price}}</center></td>
     <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
      </center></td>
       <td><center>{{item.total = item.price * item.quantity}}</center></td>
-       <td><center><button ng-click="deleteItem($index)">Delete</button></center>
+       <td><center style="margin: 10px"><button type="button" class="btn btn-primary btn-sm" ng-click="deleteItem($index)">Delete</button></center>
         </tr>
        </table>
       </center>
@@ -46,9 +44,9 @@
   <div style="float:left">
    <div style="padding: 10px 50px 30px 50px">Address : </br>{{user.address}}</div></div>
     <div style="padding: 10px 50px 30px 90px">
-     <button ng-click="itemList()">Items-List</button>
+     <button type="button" class="btn btn-primary btn-sm" ng-click="itemList()">Items-List</button>
       <div style="float:right">
-       <button ng-click="createOrder()">Create-Order</button>
+       <button type="button" class="btn btn-primary btn-sm" ng-click="createOrder()">Create-Order</button>
       </div>
      </div>
     </td>

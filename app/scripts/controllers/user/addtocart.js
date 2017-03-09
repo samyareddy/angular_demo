@@ -14,7 +14,8 @@ app.controller('addtocartCtrl', function($scope, $stateParams, ItemService, $sta
   $scope.deleteItem= function(index){
     console.log("item")
     ItemService.deleteItem(index);
- $scope.cartList = ItemService.cartDetails();
+  $scope.cartList = ItemService.cartDetails();
+  
   }
 
   $scope.itemList= function(){
@@ -23,8 +24,8 @@ app.controller('addtocartCtrl', function($scope, $stateParams, ItemService, $sta
 
   $scope.createOrder= function(){
  
- $scope.cartList = ItemService.createOrder();
+  $scope.cartList = ItemService.createOrder();
     $state.go('userorders');
   }
 
-  });
+});

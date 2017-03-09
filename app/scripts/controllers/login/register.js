@@ -6,4 +6,4 @@ app.controller('registerCtrl', function($scope, $stateParams, userAccountService
         $state.go('login');
   }
   
-  });
+});
