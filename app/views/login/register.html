@@ -3,7 +3,7 @@
   <table width="50%" border="0">
    <tr>
     <td colspan="1" bgcolor="#eee" width="100" height="600" >
-     <center>Register!</center>
+     <center>Registrationadm!</center>
       <div style="padding: 10px 50px 30px 50px">
        <div>
         <form name="auForm"></br>
@@ -16,19 +16,19 @@
                </div>
                 </br>
 <label>Last Name :</label>
- <input type="text" id="lastName" name="lastName" ng-model="user.lastName" ng-pattern="/[a-zA-Z]/"      required /></br>
+ <input type="text" id="lastName" name="lastName" ng-model="user.lastName" ng-pattern="/[a-zA-Z]/" required /></br>
    <div ng-messages = "auForm.lastName.$error">
     <div ng-message = "required">*Last Name is required</div>
      <div ng-message = "pattern">*Last Name is invalid</div>
       </div></br>
 <label>Role :</label>
-  <input type="text" id="userRole" name="userRole" ng-model="user.role" ng-pattern = "/[a-zA-Z]/"       required />
+  <input type="text" id="userRole" name="userRole" ng-model="user.role" ng-pattern = "/[a-zA-Z]/" required />
     <div ng-messages = "auForm.userRole.$error">
       <div ng-message = "required">*Role is required</div><br/>
        <div ng-message = "pattern">*Role is invalid</div>
         </div>
 <label>User Name :</label>
-  <input type="text" id="userName" name="userName" ng-model="user.userName" ng-pattern = "/[a-zA-Z]/"       required /></br>
+  <input type="text" id="userName" name="userName" ng-model="user.userName" ng-pattern = "/[a-zA-Z]/" required /></br>
     <div ng-messages = "auForm.userName.$error">
       <div ng-message = "required">*User Name is required</div>
         <div ng-message = "pattern">*User Name is invalid</div>

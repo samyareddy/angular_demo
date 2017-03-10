@@ -16,7 +16,7 @@
   <center>Categories!</center></br>
    <div style="padding: 10px 50px 30px 50px">
     <label><input type="checkbox" id="books" name="books" ng-model="searchCategory.books" />
-     <a >Books</a></label></br></br>
+     <a>Books</a></label></br></br>
       <label><input type="checkbox" id="furniture" name="furniture" ng-model="searchCategory.furniture" />
        <a>Furniture</a></label></br></br>
         <label><input type="checkbox" id="grocery" name="grocery" ng-model="searchCategory.grocery" />
@@ -25,23 +25,28 @@
            <a>Clothing</a></label></br>
           </td>
         </div>
+       
 <td bgcolor="#eee" width="0" height="500">
  <center><div>Items!</div></center>
   <div style="padding: 20px 10px 10px 20px">
    <center>
-    <table width="900" border="1">
-     <tr>
-      <th><div style="padding: 20px 20px 20px 20px"><center>Item Name</center></th>
-        <th><div style="padding: 20px 20px 20px 20px"><center>Price</center></th>
-         <th><div style="padding: 20px 20px 20px 20px"><center>Action</center></th>
+    <div id="table-wrapper">
+     <div id="table-scroll">
+      <table width="900" border="1">
+       <tr>
+        <th><div style="padding: 20px"><center>Item Name</center></th>
+        <th><div style="padding: 20px"><center>Price</center></th>
+        <th><div style="padding: 20px"><center>Action</center></th>
         </tr>
 <tr ng-repeat = "item in itemList | bygenre: searchCategory">  
   <td><center>{{item.itemName}}</center></td>
    <td><center>{{item.price}}</center></td>
      <td><center style="margin: 10px"><button type="button" class="btn btn-primary btn-sm" ng-click="addtocart(item)">
             Add-To-Cart</button></center></td>
-       </tr>
-      </table>
+         </tr>
+        </table>
+       </div>
+      </div>
      </center>
     </div>
    </td>

@@ -14,30 +14,36 @@
  <td bgcolor="#b5dcb3" width="100" height="400">
   <div style="padding: 20px 0px 0px 20px">
    <center>OrderList!</center>
-    <div style="padding: 20px 20px 20px 20px">
+    <div style="padding: 20px">
      <center>
-      <table width="600" border="1">
-       <tr>
-        <th><div style="padding: 10px 10px 10px 10px"><center>Order-ID</center></th>
-         <th><div style="padding: 10px 10px 10px 10px"><center>Order Date</center></th>
-          <th><div style="padding: 10px 10px 10px 10px"><center>Item Count</center></th>
-           <th><div style="padding: 10px 10px 10px 10px"><center>Total</center></th>
-            <th><div style="padding: 10px 10px 10px 10px"><center>Address</center></th>
-             </tr>
+      <div id="table-wrapper">
+       <div id="table-scroll">
+        <table width="600" border="1" height="100px">
+         <tr>
+          <th><div style="padding: 10px"><center>Order-ID</center></div></th>
+          <th><div style="padding: 10px"><center>Order Date</center></div></th>
+          <th><div style="padding: 10px"><center>Item Count</center></div></th>
+          <th><div style="padding: 10px"><center>Total</center></div></th>
+          <th><div style="padding: 10px"><center>Address</center></div></th>
+        </tr>
 <tr ng-repeat = "order in OrderList">  
  <td><center>{{order.orderid}}</center></td>
   <td><center>{{order.orderdate | date : "dd.MM.y"}}</center></td>
    <td><center>{{order.itemcount}}</center></td>
      <td><center>{{order.total}}</center></td>
       <td><center>{{user.address}}</center></td>
-     </tr>
-    </table>
-   </center>
-  </td>
- </tr>
+        </tr>
+       </table>
+      </div>
+     </div>
+    </center>
+   </div>
+  </div>
+ </td>
+</tr>
 <tr>
   <td colspan="1" bgcolor="#aaa" height="50">
-    <div style="padding: 30px 30px 30px 30px">
+    <div style="padding: 30px">
      <button type="button" class="btn btn-primary btn-sm" ng-click="itemList()">Items-List</button>
     </div>
    </td>

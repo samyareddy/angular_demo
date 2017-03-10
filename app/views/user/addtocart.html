@@ -18,27 +18,32 @@
    <center>Create-Order!</center>
     <div style="padding: 30px 20px 20px 20px">
      <center>
-      <table width="600" border="1">
-       <tr>
-        <th><div style="padding: 10px 10px 10px 10px"><center>Item Name</center></th>
-          <th><div style="padding: 10px 10px 10px 10px"><center>Price</center></th>
-           <th><div style="padding: 10px 10px 10px 10px"><center>Quantity</center></th>
-            <th><div style="padding: 10px 10px 10px 10px"><center>Total</center></th>
-             <th><div style="padding: 10px 10px 10px 10px"><center>Action</center></th>
-           </tr>
-<tr ng-repeat = "item in cartList">  
- <td><center>{{item.itemName}}</center></td>
-   <td><center>{{item.price}}</center></td>
-    <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
-     </center></td>
-      <td><center>{{item.total = item.price * item.quantity}}</center></td>
-       <td><center style="margin: 10px"><button type="button" class="btn btn-primary btn-sm" ng-click="deleteItem($index)">Delete</button></center>
+      <div id="table-wrapper">
+       <div id="table-scroll">
+        <table width="600" border="1">
+         <tr>
+          <th><div style="padding: 20px"><center>Item Name</center></th>
+           <th><center>Price</center></th>
+           <th><center>Quantity</center></th>
+           <th><center>Total</center></th>
+           <th><center>Action</center></th>
+         </div>
         </tr>
-       </table>
+<tr ng-repeat = "item in cartList">  
+ <td ><center>{{item.itemName}}</center></td>
+   <td><center>{{item.price}}</center></td>
+     <td><center><input type="number" id="quantity" name="quantity" ng-model="item.quantity">
+       </center></td>
+         <td><center>{{item.total = item.price * item.quantity}}</center></td>
+          <td><center style="margin: 10px"><button type="button" class="btn btn-primary btn-sm" ng-click="deleteItem($index)">      Delete</button></center>
+          </tr>
+         </table>
+        </div>
+       </div>
       </center>
      </div>
     </td>
-  </tr>
+   </tr>
 <tr>
  <td colspan="1" bgcolor="#aaa" height="100">
   <div style="float:left">

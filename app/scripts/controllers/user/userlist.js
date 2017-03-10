@@ -47,7 +47,7 @@ app.controller('userlistCtrl', function($scope, $stateParams, ItemService, $stat
       
   return items.out;
    
-    };
+      };
 
   });
 
